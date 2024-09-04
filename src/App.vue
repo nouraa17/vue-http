@@ -1,19 +1,35 @@
 <template>
   <div>
-    <PostList></PostList>
+    <HoverCounter></HoverCounter>
+
+    <ClickCounter></ClickCounter>
+
+    <TemplateRef></TemplateRef>
+
+    <Parent></Parent>
 
     <CreatePost></CreatePost>
+
+    <PostList></PostList>
   </div>
 </template>
 
 <script>
 import PostList from "@/components/PostList.vue";
 import CreatePost from "@/components/CreatePost.vue";
+import Parent from "@/components/Parent.vue";
+import TemplateRef from "@/components/TemplateRef.vue";
+import ClickCounter from "@/components/ClickCounter.vue";
+import HoverCounter from "@/components/HoverCounter.vue";
 export default {
   name: 'App',
   components: {
     PostList,
     CreatePost,
+    Parent,
+    TemplateRef,
+    ClickCounter,
+    HoverCounter,
   },
 }
 </script>

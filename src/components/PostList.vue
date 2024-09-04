@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button @click="getPosts">Load Posts</button>
+<!--    <button @click="getPosts">Load Posts</button>-->
     <h3 v-if="errorMsg">{{errorMsg}}</h3>
     <div v-for="post in posts" :key="post.id">
       <h3>{{post.id}}. {{post.title}}</h3>
@@ -19,6 +19,9 @@ import axios from "axios";
         posts:[],
         errorMsg:''
       }
+    },
+    created() {
+      this.getPosts(); // fetch the data when page loads
     },
     methods: {
       getPosts(){
